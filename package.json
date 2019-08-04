@@ -3,6 +3,20 @@
   "version": "1.0.0",
   "description": "Proyecto [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)",
   "main": "index.js",
+  "scripts": {
+    "now-build": "npm run build",
+    "build": "webpack",
+    "lint": "standard",
+    "dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "html-webpack-plugin": "^3.2.0",
     "react": "^16.8.6",
@@ -15,18 +29,15 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "standard": "^13.1.0",
     "webpack-dev-server": "^3.7.2"
   },
-  "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "standard": {
+    "ignore": [
+        "/api/**"
+    ]
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "eslintConfig": {
+      "extends": ["./node_modules/standard/eslintrc.json"]
+  }
 }
