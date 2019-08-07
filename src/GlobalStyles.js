@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 
   ul {
     list-style: none;
+    padding: 0;
   }
 
   button {
@@ -26,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background: #fefefe;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
     max-width: 500px;
     overscroll-behavior: none;
