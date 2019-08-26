@@ -1,6 +1,6 @@
 import React from 'react'
 import { ListOfCategories } from './components/ListOfCategories'
-import { ListOfPhotosCards } from './components/ListOfPhotosCards'
+import { ListOfPhotosCards } from './container/ListOfPhotoCards'
 import { Logo } from './components/Logo'
 
 import { GlobalStyle } from './styles/GlobalStyles'
@@ -10,6 +10,6 @@ export const App = () => (
     <GlobalStyle />
     <Logo />
     <ListOfCategories />
-    <ListOfPhotosCards />
+    <ListOfPhotosCards categoryId={2} />
   </div>
 )
