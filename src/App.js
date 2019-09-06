@@ -11,6 +11,7 @@ import { NavBar } from './components/NavBar'
 import { Logo } from './components/Logo'
 
 import { GlobalStyle } from './styles/GlobalStyles'
+import Context from './Context'
 
 const UserLogged = ({ children }) => {
   return children({ isAuth: false })
@@ -27,7 +28,7 @@ export const App = () => {
         <Detail path='/detail/:detailId' />
       </Router>
 
-      <UserLogged>
+      <Context.Consumer>
         {
           ({ isAuth }) =>
             isAuth
@@ -40,7 +41,7 @@ export const App = () => {
                 <NotRegisteredUser path='/user' />
               </Router>
         }
-      </UserLogged>
+      </Context.Consumer>
 
       <NavBar />
     </div>
