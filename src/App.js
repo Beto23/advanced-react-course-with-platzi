@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react'
-import { ListOfCategories } from './components/ListOfCategories'
-import { ListOfPhotoCards } from './container/ListOfPhotoCards'
+import React from 'react'
+import { Router } from '@reach/router'
+import { Home } from './pages/Home'
 import { PhotoCardWithQuery } from './container/PhotoCardWithQuery'
 import { Logo } from './components/Logo'
 
@@ -17,10 +17,10 @@ export const App = () => {
       {
         detailId
           ? <PhotoCardWithQuery id={detailId} />
-          : <Fragment>
-            <ListOfCategories />
-            <ListOfPhotoCards categoryId={1} />
-          </Fragment>
+          : <Router>
+            <Home path='/' />
+            <Home path='/pet/:id' />
+          </Router>
       }
     </div>
   )

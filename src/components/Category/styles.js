@@ -1,8 +1,9 @@
 import styled from 'styled-components'
+import { Link as LinkRouter } from '@reach/router'
 
 // media queries https://jsramblings.com/2018/02/04/styled-components-media-queries.html
 
-export const Anchor = styled.a`
+export const Link = styled(LinkRouter)`
   display: flex;
   flex-direction: column;
   text-align: center;
